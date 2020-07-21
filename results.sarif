@@ -16,7 +16,6 @@
               "fullDescription": {
                 "text": "The debug module is vulnerable to regular expression denial of service when untrusted user input is passed into the o formatter. It takes around 50k characters to block for 2 seconds making this a low severity issue."
               },
-              "defaultConfiguration": null,
               "properties": {
                 "tags": [
                   "debug"
@@ -33,7 +32,6 @@
               "fullDescription": {
                 "text": "nodejs ejs versions older than 2.5.3 is vulnerable to remote code execution due to weak input validation in ejs.renderFile() function."
               },
-              "defaultConfiguration": null,
               "properties": {
                 "tags": [
                   "ejs"
@@ -50,7 +48,6 @@
               "fullDescription": {
                 "text": "nodejs ejs version older than 2.5.5 is vulnerable to a Cross-site-scripting in the ejs.renderFile() resulting in code injection."
               },
-              "defaultConfiguration": null,
               "properties": {
                 "tags": [
                   "ejs"
@@ -67,7 +64,6 @@
               "fullDescription": {
                 "text": "nodejs ejs version older than 2.5.5 is vulnerable to a denial-of-service due to weak input validation in the ejs.renderFile()."
               },
-              "defaultConfiguration": null,
               "properties": {
                 "tags": [
                   "ejs"
@@ -84,7 +80,6 @@
               "fullDescription": {
                 "text": "Fresh is a module used by the Express.js framework for HTTP response freshness testing. It is vulnerable to a regular expression denial of service when it is passed specially crafted input to parse. This causes the event loop to be blocked causing a denial of service condition."
               },
-              "defaultConfiguration": null,
               "properties": {
                 "tags": [
                   "fresh"
@@ -101,7 +96,6 @@
               "fullDescription": {
                 "text": "The mime module < 1.4.1, 2.0.1, 2.0.2 is vulnerable to regular expression denial of service when a mime lookup is performed on untrusted user input."
               },
-              "defaultConfiguration": null,
               "properties": {
                 "tags": [
                   "mime"
@@ -118,7 +112,6 @@
               "fullDescription": {
                 "text": "An attacker can use the format parameter to inject arbitrary commands in the npm package morgan < 1.9.1."
               },
-              "defaultConfiguration": null,
               "properties": {
                 "tags": [
                   "morgan"
@@ -135,7 +128,6 @@
               "fullDescription": {
                 "text": "Code Injection Vulnerability in morgan Package."
               },
-              "defaultConfiguration": null,
               "properties": {
                 "tags": [
                   "morgan"
@@ -152,7 +144,6 @@
               "fullDescription": {
                 "text": "negotiator is an HTTP content negotiator for Node.js and is used by many modules and frameworks including Express and Koa.\n\nThe header for \"Accept-Language\", when parsed by negotiator is vulnerable to Regular Expression Denial of Service via a specially crafted string. \n\nTimeline\n\n- April 29th 2016 - Initial report to maintainers\n- April 29th 2016 - Confirm receipt from maintainers\n- May 1st 2016 - Fix confirmed\n- May 5th 2016 - 0.6.1 published with fix\n- June 16th 2016 - Advisory published (delay was to coordinate fixes in upstream frameworks, Koa and Express)."
               },
-              "defaultConfiguration": null,
               "properties": {
                 "tags": [
                   "negotiator"
@@ -169,7 +160,6 @@
               "fullDescription": {
                 "text": "negotiator is an HTTP content negotiator for Node.js and is used by many modules and frameworks including Express and Koa. The header for \"Accept-Language\", when parsed by negotiator 0.6.0 and earlier is vulnerable to Regular Expression Denial of Service via a specially crafted string."
               },
-              "defaultConfiguration": null,
               "properties": {
                 "tags": [
                   "negotiator"
@@ -186,7 +176,6 @@
               "fullDescription": {
                 "text": "A remote code execution vulnerability was found within the pg module when the remote database or query specifies a specially crafted column name. There are 2 likely scenarios in which one would likely be vulnerable. 1) Executing unsafe, user-supplied sql which contains a malicious column name. 2) Connecting to an untrusted database and executing a query which returns results where any of the column names are malicious."
               },
-              "defaultConfiguration": null,
               "properties": {
                 "tags": [
                   "pg"
@@ -203,7 +192,6 @@
               "fullDescription": {
                 "text": "the web framework using ljharb's qs module older than v6.3.2, v6.2.3, v6.1.2, and v6.0.4 is vulnerable to a DoS. A malicious user can send a evil request to cause the web framework crash."
               },
-              "defaultConfiguration": null,
               "properties": {
                 "tags": [
                   "qs"
