@@ -8,171 +8,205 @@
           "name": "Trivy: Vulnerability Scanner for Containers",
           "rules": [
             {
-              "id": "[MEDIUM] CVE-2019-11358",
+              "id": "[MEDIUM] CVE-2017-16137",
               "name": "container_scanning",
               "shortDescription": {
-                "text": "error found in package jqueryjs-jquery: prototype pollution in object's prototype leading to denial of service or remote code execution or property injection."
+                "text": "error found in package debugnodejs-debug: Regular expression Denial of Service."
               },
               "fullDescription": {
-                "text": "jQuery before 3.4.0, as used in Drupal, Backdrop CMS, and other products, mishandles jQuery.extend(true, {}, ...) because of Object.prototype pollution. If an unsanitized source object contained an enumerable __proto__ property, it could extend the native Object.prototype."
+                "text": "The debug module is vulnerable to regular expression denial of service when untrusted user input is passed into the o formatter. It takes around 50k characters to block for 2 seconds making this a low severity issue."
               },
               "defaultConfiguration": null,
               "properties": {
                 "tags": [
-                  "jquery"
+                  "debug"
                 ],
                 "precision": "very-high"
               }
             },
             {
-              "id": "[MEDIUM] CVE-2019-5428",
+              "id": "[HIGH] CVE-2017-1000228",
               "name": "container_scanning",
               "shortDescription": {
-                "text": "error found in package jqueryModification of Assumed-Immutable Data (MAID)."
+                "text": "error found in package ejsHigh severity vulnerability that affects ejs."
               },
               "fullDescription": {
-                "text": "Prototype pollution attack through jQuery $.extend."
+                "text": "nodejs ejs versions older than 2.5.3 is vulnerable to remote code execution due to weak input validation in ejs.renderFile() function."
               },
               "defaultConfiguration": null,
               "properties": {
                 "tags": [
-                  "jquery"
+                  "ejs"
                 ],
                 "precision": "very-high"
               }
             },
             {
-              "id": "[MEDIUM] CVE-2020-11022",
+              "id": "[MEDIUM] CVE-2017-1000188",
               "name": "container_scanning",
               "shortDescription": {
-                "text": "error found in package jqueryjquery: Cross-site scripting due to improper injQuery.htmlPrefilter method."
+                "text": "error found in package ejsnodejs-ejs: Cross-site scripting via ejs.renderFile()."
               },
               "fullDescription": {
-                "text": "In jQuery versions greater than or equal to 1.2 and before 3.5.0, passing HTML from untrusted sources - even after sanitizing it - to one of jQuery's DOM manipulation methods (i.e. .html(), .append(), and others) may execute untrusted code. This problem is patched in jQuery 3.5.0."
+                "text": "nodejs ejs version older than 2.5.5 is vulnerable to a Cross-site-scripting in the ejs.renderFile() resulting in code injection."
               },
               "defaultConfiguration": null,
               "properties": {
                 "tags": [
-                  "jquery"
+                  "ejs"
                 ],
                 "precision": "very-high"
               }
             },
             {
-              "id": "[MEDIUM] CVE-2020-11023",
+              "id": "[MEDIUM] CVE-2017-1000189",
               "name": "container_scanning",
               "shortDescription": {
-                "text": "error found in package jqueryjQuery: passing HTML containing <option> elements to manipulation methods could result in untrusted code execution."
+                "text": "error found in package ejsnodejs-ejs: Denial of Service via renderFile() by overriding localNames."
               },
               "fullDescription": {
-                "text": "In jQuery versions greater than or equal to 1.0.3 and before 3.5.0, passing HTML containing <option> elements from untrusted sources - even after sanitizing it - to one of jQuery's DOM manipulation methods (i.e. .html(), .append(), and others) may execute untrusted code. This problem is patched in jQuery 3.5.0."
+                "text": "nodejs ejs version older than 2.5.5 is vulnerable to a denial-of-service due to weak input validation in the ejs.renderFile()."
               },
               "defaultConfiguration": null,
               "properties": {
                 "tags": [
-                  "jquery"
+                  "ejs"
                 ],
                 "precision": "very-high"
               }
             },
             {
-              "id": "[HIGH] CVE-2018-16487",
+              "id": "[MEDIUM] CVE-2017-16119",
               "name": "container_scanning",
               "shortDescription": {
-                "text": "error found in package lodashlodash: Prototype pollution in utilities function."
+                "text": "error found in package freshnodejs-fresh: Regular expression denial of service when parsing crafted user input."
               },
               "fullDescription": {
-                "text": "A prototype pollution vulnerability was found in lodash <4.17.11 where the functions merge, mergeWith, and defaultsDeep can be tricked into adding or modifying properties of Object.prototype."
+                "text": "Fresh is a module used by the Express.js framework for HTTP response freshness testing. It is vulnerable to a regular expression denial of service when it is passed specially crafted input to parse. This causes the event loop to be blocked causing a denial of service condition."
               },
               "defaultConfiguration": null,
               "properties": {
                 "tags": [
-                  "lodash"
+                  "fresh"
                 ],
                 "precision": "very-high"
               }
             },
             {
-              "id": "[HIGH] CVE-2019-10744",
+              "id": "[MEDIUM] CVE-2017-16138",
               "name": "container_scanning",
               "shortDescription": {
-                "text": "error found in package lodashnodejs-lodash: prototype pollution in defaultsDeep function leading to modifying properties."
+                "text": "error found in package mimenodejs-mime: Regular expression Denial of Service."
               },
               "fullDescription": {
-                "text": "Versions of lodash lower than 4.17.12 are vulnerable to Prototype Pollution. The function defaultsDeep could be tricked into adding or modifying properties of Object.prototype using a constructor payload."
+                "text": "The mime module < 1.4.1, 2.0.1, 2.0.2 is vulnerable to regular expression denial of service when a mime lookup is performed on untrusted user input."
               },
               "defaultConfiguration": null,
               "properties": {
                 "tags": [
-                  "lodash"
+                  "mime"
                 ],
                 "precision": "very-high"
               }
             },
             {
-              "id": "[HIGH] NSWG-ECO-516",
+              "id": "[HIGH] CVE-2019-5413",
               "name": "container_scanning",
               "shortDescription": {
-                "text": "error found in package lodashAllocation of Resources Without Limits or Throttling."
+                "text": "error found in package morgannodejs-morgan: Unescaped input in compile() function."
               },
               "fullDescription": {
-                "text": "Prototype pollution attack (lodash)."
+                "text": "An attacker can use the format parameter to inject arbitrary commands in the npm package morgan < 1.9.1."
               },
               "defaultConfiguration": null,
               "properties": {
                 "tags": [
-                  "lodash"
+                  "morgan"
                 ],
                 "precision": "very-high"
               }
             },
             {
-              "id": "[MEDIUM] CVE-2019-1010266",
+              "id": "[MEDIUM] NSWG-ECO-473",
               "name": "container_scanning",
               "shortDescription": {
-                "text": "error found in package lodashModerate severity vulnerability that affects lodash."
+                "text": "error found in package morganArbitrary Code Injection."
               },
               "fullDescription": {
-                "text": "lodash prior to 4.17.11 is affected by: CWE-400: Uncontrolled Resource Consumption. The impact is: Denial of service. The component is: Date handler. The attack vector is: Attacker provides very long strings, which the library attempts to match using a regular expression. The fixed version is: 4.17.11."
+                "text": "Code Injection Vulnerability in morgan Package."
               },
               "defaultConfiguration": null,
               "properties": {
                 "tags": [
-                  "lodash"
+                  "morgan"
                 ],
                 "precision": "very-high"
               }
             },
             {
-              "id": "[LOW] CVE-2018-3721",
+              "id": "[HIGH] NSWG-ECO-106",
               "name": "container_scanning",
               "shortDescription": {
-                "text": "error found in package lodashlodash: Prototype pollution in utilities function."
+                "text": "error found in package negotiatorRegular Expression Denial of Service."
               },
               "fullDescription": {
-                "text": "lodash node module before 4.17.5 suffers from a Modification of Assumed-Immutable Data (MAID) vulnerability via defaultsDeep, merge, and mergeWith functions, which allows a malicious user to modify the prototype of \"Object\" via __proto__, causing the addition or modification of an existing property that will exist on all objects."
+                "text": "negotiator is an HTTP content negotiator for Node.js and is used by many modules and frameworks including Express and Koa.\n\nThe header for \"Accept-Language\", when parsed by negotiator is vulnerable to Regular Expression Denial of Service via a specially crafted string. \n\nTimeline\n\n- April 29th 2016 - Initial report to maintainers\n- April 29th 2016 - Confirm receipt from maintainers\n- May 1st 2016 - Fix confirmed\n- May 5th 2016 - 0.6.1 published with fix\n- June 16th 2016 - Advisory published (delay was to coordinate fixes in upstream frameworks, Koa and Express)."
               },
               "defaultConfiguration": null,
               "properties": {
                 "tags": [
-                  "lodash"
+                  "negotiator"
                 ],
                 "precision": "very-high"
               }
             },
             {
-              "id": "[LOW] GHSA-p6mc-m468-83gw",
+              "id": "[MEDIUM] CVE-2016-10539",
               "name": "container_scanning",
               "shortDescription": {
-                "text": "error found in package lodashPrototype Pollution in lodash."
+                "text": "error found in package negotiatorHigh severity vulnerability that affects negotiator."
               },
               "fullDescription": {
-                "text": "Versions of lodash prior to 4.17.19 are vulnerable to Prototype Pollution. The function zipObjectDeep allows a malicious user to modify the prototype of Object if the property identifiers are user-supplied. Being affected by this issue requires zipping objects based on user-provided property arrays.\r\n\r\nThis vulnerability causes the addition or modification of an existing property that will exist on all objects and may lead to Denial of Service or Code Execution under specific circumstances."
+                "text": "negotiator is an HTTP content negotiator for Node.js and is used by many modules and frameworks including Express and Koa. The header for \"Accept-Language\", when parsed by negotiator 0.6.0 and earlier is vulnerable to Regular Expression Denial of Service via a specially crafted string."
               },
               "defaultConfiguration": null,
               "properties": {
                 "tags": [
-                  "lodash"
+                  "negotiator"
+                ],
+                "precision": "very-high"
+              }
+            },
+            {
+              "id": "[HIGH] CVE-2017-16082",
+              "name": "container_scanning",
+              "shortDescription": {
+                "text": "error found in package pgHigh severity vulnerability that affects pg."
+              },
+              "fullDescription": {
+                "text": "A remote code execution vulnerability was found within the pg module when the remote database or query specifies a specially crafted column name. There are 2 likely scenarios in which one would likely be vulnerable. 1) Executing unsafe, user-supplied sql which contains a malicious column name. 2) Connecting to an untrusted database and executing a query which returns results where any of the column names are malicious."
+              },
+              "defaultConfiguration": null,
+              "properties": {
+                "tags": [
+                  "pg"
+                ],
+                "precision": "very-high"
+              }
+            },
+            {
+              "id": "[MEDIUM] CVE-2017-1000048",
+              "name": "container_scanning",
+              "shortDescription": {
+                "text": "error found in package qsnodejs-qs: Prototype override protection bypass."
+              },
+              "fullDescription": {
+                "text": "the web framework using ljharb's qs module older than v6.3.2, v6.2.3, v6.1.2, and v6.0.4 is vulnerable to a DoS. A malicious user can send a evil request to cause the web framework crash."
+              },
+              "defaultConfiguration": null,
+              "properties": {
+                "tags": [
+                  "qs"
                 ],
                 "precision": "very-high"
               }
@@ -181,92 +215,110 @@
       },
       "results": [
         {
-          "ruleId": "[MEDIUM] CVE-2019-11358",
+          "ruleId": "[MEDIUM] CVE-2017-16137",
           "ruleIndex": 0,
           "level": "error",
           "message": {
-            "text": "jQuery before 3.4.0, as used in Drupal, Backdrop CMS, and other products, mishandles jQuery.extend(true, {}, ...) because of Object.prototype pollution. If an unsanitized source object contained an enumerable __proto__ property, it could extend the native Object.prototype."
+            "text": "The debug module is vulnerable to regular expression denial of service when untrusted user input is passed into the o formatter. It takes around 50k characters to block for 2 seconds making this a low severity issue."
           },
           "locations": []
         },
         {
-          "ruleId": "[MEDIUM] CVE-2019-5428",
+          "ruleId": "[HIGH] CVE-2017-1000228",
           "ruleIndex": 1,
           "level": "error",
           "message": {
-            "text": "Prototype pollution attack through jQuery $.extend."
+            "text": "nodejs ejs versions older than 2.5.3 is vulnerable to remote code execution due to weak input validation in ejs.renderFile() function."
           },
           "locations": []
         },
         {
-          "ruleId": "[MEDIUM] CVE-2020-11022",
+          "ruleId": "[MEDIUM] CVE-2017-1000188",
           "ruleIndex": 2,
           "level": "error",
           "message": {
-            "text": "In jQuery versions greater than or equal to 1.2 and before 3.5.0, passing HTML from untrusted sources - even after sanitizing it - to one of jQuery's DOM manipulation methods (i.e. .html(), .append(), and others) may execute untrusted code. This problem is patched in jQuery 3.5.0."
+            "text": "nodejs ejs version older than 2.5.5 is vulnerable to a Cross-site-scripting in the ejs.renderFile() resulting in code injection."
           },
           "locations": []
         },
         {
-          "ruleId": "[MEDIUM] CVE-2020-11023",
+          "ruleId": "[MEDIUM] CVE-2017-1000189",
           "ruleIndex": 3,
           "level": "error",
           "message": {
-            "text": "In jQuery versions greater than or equal to 1.0.3 and before 3.5.0, passing HTML containing <option> elements from untrusted sources - even after sanitizing it - to one of jQuery's DOM manipulation methods (i.e. .html(), .append(), and others) may execute untrusted code. This problem is patched in jQuery 3.5.0."
+            "text": "nodejs ejs version older than 2.5.5 is vulnerable to a denial-of-service due to weak input validation in the ejs.renderFile()."
           },
           "locations": []
         },
         {
-          "ruleId": "[HIGH] CVE-2018-16487",
+          "ruleId": "[MEDIUM] CVE-2017-16119",
           "ruleIndex": 4,
           "level": "error",
           "message": {
-            "text": "A prototype pollution vulnerability was found in lodash <4.17.11 where the functions merge, mergeWith, and defaultsDeep can be tricked into adding or modifying properties of Object.prototype."
+            "text": "Fresh is a module used by the Express.js framework for HTTP response freshness testing. It is vulnerable to a regular expression denial of service when it is passed specially crafted input to parse. This causes the event loop to be blocked causing a denial of service condition."
           },
           "locations": []
         },
         {
-          "ruleId": "[HIGH] CVE-2019-10744",
+          "ruleId": "[MEDIUM] CVE-2017-16138",
           "ruleIndex": 5,
           "level": "error",
           "message": {
-            "text": "Versions of lodash lower than 4.17.12 are vulnerable to Prototype Pollution. The function defaultsDeep could be tricked into adding or modifying properties of Object.prototype using a constructor payload."
+            "text": "The mime module < 1.4.1, 2.0.1, 2.0.2 is vulnerable to regular expression denial of service when a mime lookup is performed on untrusted user input."
           },
           "locations": []
         },
         {
-          "ruleId": "[HIGH] NSWG-ECO-516",
+          "ruleId": "[HIGH] CVE-2019-5413",
           "ruleIndex": 6,
           "level": "error",
           "message": {
-            "text": "Prototype pollution attack (lodash)."
+            "text": "An attacker can use the format parameter to inject arbitrary commands in the npm package morgan < 1.9.1."
           },
           "locations": []
         },
         {
-          "ruleId": "[MEDIUM] CVE-2019-1010266",
+          "ruleId": "[MEDIUM] NSWG-ECO-473",
           "ruleIndex": 7,
           "level": "error",
           "message": {
-            "text": "lodash prior to 4.17.11 is affected by: CWE-400: Uncontrolled Resource Consumption. The impact is: Denial of service. The component is: Date handler. The attack vector is: Attacker provides very long strings, which the library attempts to match using a regular expression. The fixed version is: 4.17.11."
+            "text": "Code Injection Vulnerability in morgan Package."
           },
           "locations": []
         },
         {
-          "ruleId": "[LOW] CVE-2018-3721",
+          "ruleId": "[HIGH] NSWG-ECO-106",
           "ruleIndex": 8,
           "level": "error",
           "message": {
-            "text": "lodash node module before 4.17.5 suffers from a Modification of Assumed-Immutable Data (MAID) vulnerability via defaultsDeep, merge, and mergeWith functions, which allows a malicious user to modify the prototype of \"Object\" via __proto__, causing the addition or modification of an existing property that will exist on all objects."
+            "text": "negotiator is an HTTP content negotiator for Node.js and is used by many modules and frameworks including Express and Koa.\n\nThe header for \"Accept-Language\", when parsed by negotiator is vulnerable to Regular Expression Denial of Service via a specially crafted string. \n\nTimeline\n\n- April 29th 2016 - Initial report to maintainers\n- April 29th 2016 - Confirm receipt from maintainers\n- May 1st 2016 - Fix confirmed\n- May 5th 2016 - 0.6.1 published with fix\n- June 16th 2016 - Advisory published (delay was to coordinate fixes in upstream frameworks, Koa and Express)."
           },
           "locations": []
         },
         {
-          "ruleId": "[LOW] GHSA-p6mc-m468-83gw",
+          "ruleId": "[MEDIUM] CVE-2016-10539",
           "ruleIndex": 9,
           "level": "error",
           "message": {
-            "text": "Versions of lodash prior to 4.17.19 are vulnerable to Prototype Pollution. The function zipObjectDeep allows a malicious user to modify the prototype of Object if the property identifiers are user-supplied. Being affected by this issue requires zipping objects based on user-provided property arrays.\r\n\r\nThis vulnerability causes the addition or modification of an existing property that will exist on all objects and may lead to Denial of Service or Code Execution under specific circumstances."
+            "text": "negotiator is an HTTP content negotiator for Node.js and is used by many modules and frameworks including Express and Koa. The header for \"Accept-Language\", when parsed by negotiator 0.6.0 and earlier is vulnerable to Regular Expression Denial of Service via a specially crafted string."
+          },
+          "locations": []
+        },
+        {
+          "ruleId": "[HIGH] CVE-2017-16082",
+          "ruleIndex": 10,
+          "level": "error",
+          "message": {
+            "text": "A remote code execution vulnerability was found within the pg module when the remote database or query specifies a specially crafted column name. There are 2 likely scenarios in which one would likely be vulnerable. 1) Executing unsafe, user-supplied sql which contains a malicious column name. 2) Connecting to an untrusted database and executing a query which returns results where any of the column names are malicious."
+          },
+          "locations": []
+        },
+        {
+          "ruleId": "[MEDIUM] CVE-2017-1000048",
+          "ruleIndex": 11,
+          "level": "error",
+          "message": {
+            "text": "the web framework using ljharb's qs module older than v6.3.2, v6.2.3, v6.1.2, and v6.0.4 is vulnerable to a DoS. A malicious user can send a evil request to cause the web framework crash."
           },
           "locations": []
         }],

@@ -1,19 +1,21 @@
 {
-  "name": "trivy-sarif-demo",
-  "version": "1.0.0",
-  "description": "A repo to test trivy SARIF output",
-  "main": "index.js",
+  "name": "vulnerable-node-source",
+  "version": "0.0.0",
+  "private": true,
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node ./bin/www"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/aquasecurity/trivy-sarif-demo.git"
-  },
-  "author": "",
-  "license": "Apache License 2.0",
-  "bugs": {
-    "url": "https://github.com/aquasecurity/trivy-sarif-demo/issues"
-  },
-  "homepage": "https://github.com/aquasecurity/trivy-sarif-demo#readme"
+  "dependencies": {
+    "body-parser": "~1.13.2",
+    "cookie-parser": "~1.3.5",
+    "debug": "~2.2.0",
+    "ejs": "^2.4.2",
+    "ejs-locals": "^1.0.2",
+    "express": "~4.13.1",
+    "express-session": "^1.13.0",
+    "log4js": "^0.6.36",
+    "morgan": "~1.6.1",
+    "pg-promise": "^4.4.6",
+    "serve-favicon": "~2.3.0"
+  }
 }
