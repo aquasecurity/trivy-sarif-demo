@@ -5,7 +5,7 @@
     {
       "tool": {
         "driver": {
-          "name": "Trivy: Vulnerability Scanner for Containers",
+          "name": "Trivy",
           "rules": [
             {
               "id": "[MEDIUM] CVE-2017-16137",
