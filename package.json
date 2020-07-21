@@ -1,0 +1,19 @@
+{
+  "name": "trivy-sarif-demo",
+  "version": "1.0.0",
+  "description": "A repo to test trivy SARIF output",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aquasecurity/trivy-sarif-demo.git"
+  },
+  "author": "",
+  "license": "Apache License 2.0",
+  "bugs": {
+    "url": "https://github.com/aquasecurity/trivy-sarif-demo/issues"
+  },
+  "homepage": "https://github.com/aquasecurity/trivy-sarif-demo#readme"
+}
