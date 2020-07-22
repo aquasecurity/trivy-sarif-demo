@@ -58,3 +58,8 @@ jobs:
         uses: github/codeql-action/upload-sarif@v1
         with:
           sarif_file: "results.sarif"
+
+      - name: Upload My fancy scanner scan results to Security tab
+        uses: github/codeql-action/upload-sarif@v1
+        with:
+          sarif_file: "demo-results.sarif"
