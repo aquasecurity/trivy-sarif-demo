@@ -17,9 +17,6 @@
               "fullDescription": {
                 "text": "Unused variables, imports, functions or classes may be a symptom of a bug and should be examined carefully."
               },
-              "defaultConfiguration": {
-                "level": "note"
-              },
               "properties": {
                 "tags": [
                   "maintainability"
@@ -36,7 +33,6 @@
               "fullDescription": {
                 "text": "If a function is intended to be a constructor, it should always be invoked with 'new'. Otherwise, it should always be invoked as a normal function, that is, without 'new'."
               },
-              "defaultConfiguration": null,
               "properties": {
                 "tags": [
                   "reliability",
@@ -241,12 +237,6 @@
             "primaryLocationLineHash": "ABC:2"
           }
         }
-      ],
-      "newlineSequences": [
-        "\r\n",
-        "\n",
-        "",
-        " "
       ],
       "columnKind": "utf16CodeUnits"
     }
