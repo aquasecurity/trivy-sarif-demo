@@ -15,19 +15,19 @@
               "id": "[MEDIUM] CVE-2017-16137",
               "name": "container_scanning",
               "shortDescription": {
-                "text": "CVE-2017-16137 Severity=Medium Package: debugnodejs-debug"
+                "text": "CVE-2017-16137 Severity=Medium Package: debug"
               },
               "fullDescription": {
-                "text": "CVE-2017-16137 Severity=Medium Package: debugnodejs-debug"
+                "text": "CVE-2017-16137 Severity=Medium Package: debug"
               },
               "help": {
-                "text": "Vulnerability CVE-2017-14938\nSeverity: Low\nPackage: binutils\nVersion: 2.26.1-1ubuntu1~16.04.8\nFix Version: None\nType: dpkg\nLocation: pkgdb\nData Namespace: vulnerabilities, ubuntu:16.04\nLink: [CVE-2017-14938](http://people.ubuntu.com/~ubuntu-security/cve/CVE-2017-14938)",
-                "markdown": "**Vulnerability CVE-2017-14938**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n|Medium|binutils|2.26.1-1ubuntu1~16.04.8|None|dpkg|pkgdb|ubuntu:16.04|[CVE-2017-14938](http://people.ubuntu.com/~ubuntu-security/cve/CVE-2017-14938)|\n"
+                "text": "Vulnerability CVE-2017-14938\nSeverity: Low\nPackage: debug\nVersion: ~2.2.0\nFix Version: 3.1.0, 2.6.9\nType: dpkg\nLocation: pkgdb\nData Namespace: vulnerabilities, ubuntu:16.04\nLink: [CVE-2017-14938](http://people.ubuntu.com/~ubuntu-security/cve/CVE-2017-14938)",
+                "markdown": "**Vulnerability CVE-2017-14938**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n|Medium|debug|2.26.1-1ubuntu1~16.04.8|None|dpkg|pkgdb|ubuntu:16.04|[CVE-2017-14938](http://people.ubuntu.com/~ubuntu-security/cve/CVE-2017-14938)|\n"
               },
               "properties": {
                 "tags": [
                   "Medium",
-                  "debugnodejs-debug"
+                  "debug"
                 ],
                 "precision": "very-high"
               }
@@ -45,10 +45,10 @@
           "locations": [{
             "physicalLocation": {
               "artifactLocation": {
-                "uri": "Dockerfile"
+                "uri": "package-lock.json"
               },
               "region": {
-                "startLine": 1,
+                "startLine": 33,
                 "startColumn": 1,
                 "endColumn": 1
               }
