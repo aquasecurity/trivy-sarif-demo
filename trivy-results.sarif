@@ -15,14 +15,19 @@
               "id": "[MEDIUM] CVE-2017-16137",
               "name": "container_scanning",
               "shortDescription": {
-                "text": "error found in package debugnodejs-debug: Regular expression Denial of Service."
+                "text": "CVE-2017-16137 Severity=Medium Package: debugnodejs-debug"
               },
               "fullDescription": {
-                "text": "The debug module is vulnerable to regular expression denial of service when untrusted user input is passed into the o formatter. It takes around 50k characters to block for 2 seconds making this a low severity issue."
+                "text": "CVE-2017-16137 Severity=Medium Package: debugnodejs-debug"
+              },
+              "help": {
+                "text": "Vulnerability CVE-2017-14938\nSeverity: Low\nPackage: binutils\nVersion: 2.26.1-1ubuntu1~16.04.8\nFix Version: None\nType: dpkg\nLocation: pkgdb\nData Namespace: vulnerabilities, ubuntu:16.04\nLink: [CVE-2017-14938](http://people.ubuntu.com/~ubuntu-security/cve/CVE-2017-14938)",
+                "markdown": "**Vulnerability CVE-2017-14938**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n|Medium|binutils|2.26.1-1ubuntu1~16.04.8|None|dpkg|pkgdb|ubuntu:16.04|[CVE-2017-14938](http://people.ubuntu.com/~ubuntu-security/cve/CVE-2017-14938)|\n"
               },
               "properties": {
                 "tags": [
-                  "debug"
+                  "Medium",
+                  "debugnodejs-debug"
                 ],
                 "precision": "very-high"
               }
