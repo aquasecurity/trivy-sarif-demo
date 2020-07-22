@@ -8,6 +8,8 @@
           "name": "Trivy",
           "fullName": "Trivy Vulnerability Scanner",
           "version": "v0.9.2",
+          "semanticVersion": "0.9.2",
+          "dottedQuadFileVersion": "0.9.2.0",
           "rules": [
             {
               "id": "[MEDIUM] CVE-2017-16137",
@@ -35,7 +37,18 @@
           "message": {
             "text": "The debug module is vulnerable to regular expression denial of service when untrusted user input is passed into the o formatter. It takes around 50k characters to block for 2 seconds making this a low severity issue."
           },
-          "locations": []
+          "locations": [{
+            "physicalLocation": {
+              "artifactLocation": {
+                "uri": "Dockerfile"
+              },
+              "region": {
+                "startLine": 1,
+                "startColumn": 1,
+                "endColumn": 1
+              }
+            }
+          }]
         }],
       "columnKind": "utf16CodeUnits"
     }
