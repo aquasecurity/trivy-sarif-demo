@@ -26,7 +26,7 @@ jobs:
       - name: Initialize CodeQL
         uses: github/codeql-action/init@v1
       - name: Run vulnerability scanner
-        uses: aquasecurity/trivy-action@master
+        uses: simar7/trivy-action@custom-docker-image
         with:
           image-ref: 'docker.io/my-organization/my-app:${{ github.sha }}'
           format: 'template'
