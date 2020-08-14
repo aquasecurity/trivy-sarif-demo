@@ -10,7 +10,6 @@ on:
 
 jobs:
   Trivy-Scan:
-    # CodeQL runs on ubuntu-latest, windows-latest, and macos-latest
     runs-on: ubuntu-latest
 
     steps:
@@ -23,8 +22,6 @@ jobs:
       - name: Build an image from Dockerfile
         run: |
           docker build -t docker.io/my-organization/my-app:${{ github.sha }} .
-      - name: Initialize CodeQL
-        uses: github/codeql-action/init@v1
       - name: Run vulnerability scanner
         uses: aquasecurity/trivy-action@master
         with:
