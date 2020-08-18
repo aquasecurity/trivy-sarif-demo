@@ -25,17 +25,19 @@ jobs:
 #        run: |
 #          docker build -t docker.io/my-organization/my-app:${{ github.sha }} .
 #
-#      - name: Build and push Docker images
-#        uses: docker/build-push-action@v1
-#        with:
-#          repository: my-organization/my-app
-#          tags: latest
-#          push: false
+      - name: Build and push Docker images
+        uses: docker/build-push-action@v1
+        with:
+          repository: my-organization/my-app
+          tags: latest
+          push: false
 
       - name: Run vulnerability scanner
-        uses: simar7/trivy-action@master
+#        uses: simar7/trivy-action@master
+        uses: aquasecurity/trivy-action@master
         with:
 #          image-ref: 'docker.io/my-organization/my-app:${{ github.sha }}'
+          image-ref: my-organization/my-app:latest
           format: 'template'
           template: '@/contrib/sarif.tpl'
           output: 'trivy-results.sarif'
