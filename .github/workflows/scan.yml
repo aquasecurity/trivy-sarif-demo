@@ -21,23 +21,14 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
-#      - name: Build an image from Dockerfile
-#        run: |
-#          docker build -t docker.io/my-organization/my-app:${{ github.sha }} .
-#
-      - name: Build and push Docker images
-        uses: docker/build-push-action@v1
-        with:
-          repository: my-organization/my-app
-          tags: latest
-          push: false
+      - name: Build an image from Dockerfile
+        run: |
+          docker build -t docker.io/my-organization/my-app:${{ github.sha }} .
 
       - name: Run vulnerability scanner
-#        uses: simar7/trivy-action@master
         uses: aquasecurity/trivy-action@master
         with:
-#          image-ref: 'docker.io/my-organization/my-app:${{ github.sha }}'
-          image-ref: my-organization/my-app:latest
+          image-ref: 'docker.io/my-organization/my-app:${{ github.sha }}'
           format: 'template'
           template: '@/contrib/sarif.tpl'
           output: 'trivy-results.sarif'
