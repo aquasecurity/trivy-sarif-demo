@@ -21,7 +21,7 @@ jobs:
           docker build -t docker.io/my-organization/my-app:${{ github.sha }} .
 
       - name: Run Trivy vulnerability scanner with repo scanning
-        uses: rahul2393/trivy-action@scan-type
+        uses: rahul2393/scan-type@master
         with:
           scan-type: 'fs'
           image-ref: '.'
