@@ -37,7 +37,7 @@ jobs:
       - name: Run Trivy vulnerability scanner in fs mode
         uses: rahul2393/trivy-action@scan-type
         with:
-          scan-type: fs
+          scan-type: 'fs'
 #          scan-ref: '.'
           format: 'template'
           template: '@/contrib/sarif.tpl'
