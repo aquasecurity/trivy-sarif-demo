@@ -38,7 +38,7 @@ jobs:
         uses: rahul2393/trivy-action@scan-type
         with:
           scan-type: fs
-          scan-ref: '.'
+#          scan-ref: '.'
           format: 'template'
           template: '@/contrib/sarif.tpl'
           output: 'trivy-results-fs.sarif'
