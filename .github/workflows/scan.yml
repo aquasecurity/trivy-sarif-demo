@@ -16,29 +16,29 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
-#      - name: Build an image from Dockerfile
-#        run: |
-#          docker build -t docker.io/my-organization/my-app:${{ github.sha }} .
-#
-#      - name: Run Trivy vulnerability scanner in docker mode
-#        uses: aquasecurity/trivy-action@master
-#        with:
-#          image-ref: 'docker.io/my-organization/my-app:${{ github.sha }}'
-#          format: 'template'
-#          template: '@/contrib/sarif.tpl'
-#          output: 'trivy-results-docker.sarif'
-#          severity: 'CRITICAL'
-#
-#      - name: Upload Trivy scan results to GitHub Security tab
-#        uses: github/codeql-action/upload-sarif@v1
-#        with:
-#          sarif_file: 'trivy-results-docker.sarif'
+      - name: Build an image from Dockerfile
+        run: |
+          docker build -t docker.io/my-organization/my-app:${{ github.sha }} .
+
+      - name: Run Trivy vulnerability scanner in docker mode
+        uses: aquasecurity/trivy-action@master
+        with:
+          image-ref: 'docker.io/my-organization/my-app:${{ github.sha }}'
+          format: 'template'
+          template: '@/contrib/sarif.tpl'
+          output: 'trivy-results-docker.sarif'
+          severity: 'CRITICAL'
+
+      - name: Upload Trivy scan results to GitHub Security tab
+        uses: github/codeql-action/upload-sarif@v1
+        with:
+          sarif_file: 'trivy-results-docker.sarif'
 
       - name: Run Trivy vulnerability scanner in fs mode
         uses: anandg112/trivy-action@feat/add-skip-dirs-option
         with:
           scan-type: 'fs'
-#          scan-ref: '.'
+          scan-ref: '.'
           ignore-unfixed: true
           format: 'template'
           template: '@/contrib/sarif.tpl'
@@ -46,10 +46,10 @@ jobs:
           severity: 'CRITICAL'
           skip-dirs: "ignored-dir"
 
-#      - name: Upload Trivy scan results to GitHub Security tab
-#        uses: github/codeql-action/upload-sarif@v1
-#        with:
-#          sarif_file: 'trivy-results-fs.sarif'
+      - name: Upload Trivy scan results to GitHub Security tab
+        uses: github/codeql-action/upload-sarif@v1
+        with:
+          sarif_file: 'trivy-results-fs.sarif'
 
       - name: DEBUG Upload Trivy scan results to GitHub Security tab
         uses: github/codeql-action/upload-sarif@v1
